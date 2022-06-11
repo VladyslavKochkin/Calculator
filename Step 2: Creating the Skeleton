@@ -1,0 +1,27 @@
+Step 1: Download PyCharm - https://www.jetbrains.com/ru-ru/pycharm/download/#section=windows
+Step 2: Open Program
+Step 3: Press button "Create New Project"
+Step 4: Choose location file - C:\\Users\Vladyslav\Downloads\Calculator
+Step 5: Press "Enter"
+Step 6: Choose directory in the left side: Project - New - Python File
+Step 7: Enter name your project - "PyCalc"
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import sys
+ 
+from PyQt5.QtWidgets import QApplication
+
+from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QWidget
+
+class PyCalcUI(QMainWindow):
+    def __init__(self):
+        super().__init__()
+ 
+        self.setWindowTitle('Calculator')
+        self.setFixedSize(235, 235)
+        
+self
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
