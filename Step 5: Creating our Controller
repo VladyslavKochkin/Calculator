@@ -91,8 +91,6 @@ class PyCalcCtrl:
         self._view.setDisplayText(result)
  
     def _buildExpression(self, sub_exp):
-        if self._view.displayText() == ERROR_MSG:
-            self._view.clearDisplay()
  
         expression = self._view.displayText() + sub_exp
         self._view.setDisplayText(expression)
@@ -102,8 +100,7 @@ class PyCalcCtrl:
             if btnText not in {"=", "C"}:
                 btn.clicked.connect(partial(self._buildExpression, btnText))
  
-        self._view.buttons["="].clicked.connect(self._calculateResult)
-        self._view.display.returnPressed.connect(self._calculateResult)
+   
         self._view.buttons["C"].clicked.connect(self._view.clearDisplay)
  
 
@@ -117,9 +114,7 @@ def main():
  
     view.show()
  
-    model = evaluateExpression
-    PyCalcCtrl(model=model, view=view)
- 
+
     sys.exit(pycalc.exec_())
  
 if __name__ == "__main__":
